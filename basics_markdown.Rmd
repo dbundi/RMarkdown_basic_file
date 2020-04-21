@@ -1,0 +1,53 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+
+title: "Basics in R"
+author: "Davis Bundi"
+date: "1/10/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+#Write a sequence of numbers
+ s1<-seq(1,90,5)
+ l1<-length(s1)
+ l1
+# replicate numbers
+ r1<-rep(3,4)
+ r1
+ 
+#Concatenate - combine vectors together
+ rs<-c(s1,r1)
+ rs
+ 
+#matrices
+library(matlib)
+a1<-seq(1,4,1)
+A<-matrix(a1, nrow=2, byrow=TRUE)
+A
+A_inv<-inv(A) 
+A_inv
+A_det<-det(A)
+A_det
+
+ 
+b1<-seq(2,120,2)
+B<-matrix(b1,nrow=6, byrow=TRUE)
+B
+
+#Logical expressions
+d1<-c(1,1,1,0)
+d2<-c(1,1,0,0)
+dor<-d1 | d2
+dand <-d1 & d2
+```
+
